@@ -1,4 +1,7 @@
-About {#mainpage}
+This is a fork of https://github.com/nieklinnenbank/FreeNOS.
+
+It is a school project and used for education purposes only.
+
 =====
 
 FreeNOS (Free Niek's Operating System) is an experimental microkernel based
