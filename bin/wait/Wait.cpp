@@ -47,7 +47,11 @@ Wait::Result Wait::exec()
     if (result == ProcessClient::Success)
     {
         // Valid process
-        wait(pid);
+        if(wait(pid)) 
+        {
+            ERROR("failed to wait: " << strerror(errno));
+            return IOError;
+        }
     }
 
     else
