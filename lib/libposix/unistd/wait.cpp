@@ -26,15 +26,16 @@
 
 unsigned int wait(unsigned int pid)
 {
-    ProcessClient::Info info;
-    printf("Waiting until process to terminate\n");
+    printf("Waiting for process to terminate\n");
 
-    // Wait until the process to terminate
+    // Wait for the process to terminate
     if (ProcessCtl(pid, WaitPID))
     {
         errno = EIO;
         return pid;
     }
+
     // Done
+    printf("Wait successful\n");
     return 0;
 }
